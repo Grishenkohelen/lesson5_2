@@ -12,7 +12,7 @@ const User = ({user}) => {
             <div>{username}</div>
             <div>{name}</div>
             <div>{email}</div>
-            <button onClick={() => navigate(`details/${id}`)}>Details</button>
+            <button onClick={() => navigate(`${id}`)}>Details</button>
             <hr/>
         </div>
     );

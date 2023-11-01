@@ -9,9 +9,10 @@ const router = createBrowserRouter([
         path:'/',element:<MainLayout/>,children:[
             {index:true ,element: <Navigate to={'users'}/>},
             {path:'users',element: <UsersPage/>},
-            {path:'users/details/:userId',element: <DetailsPage/>,children:[
-                    {path:':postId',element: <PostPage/>}
-                ]}
+            {path:'users/:userId',element: <DetailsPage/>,children:[
+                    {path:'posts',element: <PostPage/>}
+                ]},
+            {path: 'users/:userId/posts/:postId'}
         ]
     }
 ])
